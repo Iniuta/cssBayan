@@ -1,5 +1,20 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   font-size: 10px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #ff0000;
 }
 
 body {
@@ -26,8 +41,34 @@ body {
   justify-content: flex-start;
 }
 
-a {
+.link {
+  font-size: 1.6rem;
+  background: linear-gradient(to bottom right, #5761b2, #1fc5a8);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
   text-decoration: none;
+  color: #c8d7e2;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  max-height: 0;
+  overflow: hidden;
+  position: relative;
+  background: transparent;
+  transition: 0.8s;
+}
+
+.h2 {
+  font-size: 2rem;
+  color: rgb(4, 34, 80);
+}
+
+.h3 {
+  font-size: 1.6rem;
   color: #c8d7e2;
 }
 
@@ -40,15 +81,24 @@ footer {
   padding: 0 2rem;
 }
 
-
 .h1 {
   color: #f8f0ee;
 }
 
-
-
-
-
 img {
-  width: 10%;
+  width: 100%;
+}
+
+.acc-item .item-checked {
+  max-height: 50rem;
+}
+
+.acc-item:target .text-container {
+  max-height: 50rem;
+  transition: 2s;
+}
+
+.acc-item:hover .text-container {
+  max-height: 50rem;
+  transition: 2s;
 }
