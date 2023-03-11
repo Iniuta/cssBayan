@@ -175,21 +175,10 @@ img {
   }
 }
 
-
 .item-checked .text-container {
-  max-height: 50rem;
+  overflow: visible;
+  max-height: 100rem;
 }
-
-@media (min-width: 1080px) {
-  .item-checked .text-container {
-    max-height: 100rem;
-  }
-}
-
-/* .acc-item:target .item-checked:target .text-container{
-  overflow: hidden;
-  max-height: 0;
-} */
 
 .acc-item:target .text-container {
   max-height: 50rem;
@@ -202,12 +191,6 @@ img {
   }
 }
 
-/* @media (min-width: 1080px) {
-  .acc-item:target .text-container {
-    max-height: 100rem;
-  }
-} */
-
 .acc-item:hover .text-container {
   max-height: 50rem;
   transition: 2s;
@@ -216,4 +199,43 @@ img {
   .acc-item:hover .text-container {
     max-height: 100rem;
   }
+}
+
+.wrapper:hover .arrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.wrapper:hover .icon {
+  background-image: url(../cssBayan/memes/slide-down.png);
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+  width: 50px;
+  height: 50px;
+  border: 0;
+  background-color: transparent;
+}
+
+.icon {
+  display: none;
+}
+
+.wrapper:hover .icon {
+  display: block;
+}
+
+.acc-item:hover .icon{
+  background-image: url(../cssBayan/memes/slide-up.png);
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+  width: 50px;
+  height: 50px;
+  border: 0;
+  background-color: transparent;
+}
+
+.acc-item:target .icon{
+  background-image: url(../cssBayan/memes/slide-up.png);
 }
