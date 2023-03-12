@@ -223,13 +223,15 @@ img {
 }
 
 @media (hover: hover) {
-  .wrapper:hover .icon {
-    background-image: url(../cssBayan/memes/slide-down.png);
+  .wrapper:hover .icon,
+  .wrapper:hover .item-checked .link .arrow .icon1 {
+    background-image: url(../cssBayan/memes/2-multiply-30.png);
     background-repeat: no-repeat;
-    background-size: 50px 50px;
-    width: 50px;
-    height: 50px;
+    background-size: 30px 30px;
+    width: 38px;
+    height: 34px;
     border: 0;
+    display: block;
     background-color: transparent;
     transition: 0.8s;
   }
@@ -248,19 +250,37 @@ img {
 
 @media (hover: hover) {
   .acc-item:hover .icon {
-    background-image: url(../cssBayan/memes/slide-up.png);
+    background-image: url(../cssBayan/memes/1-rotate-multiply-30.png);
     background-repeat: no-repeat;
-    background-size: 50px 50px;
-    width: 50px;
-    height: 50px;
+    background-size: 30px 30px;
+    width: 38px;
+    height: 34px;
     border: 0;
     background-color: transparent;
     transition: 0.8s;
   }
 }
 
-.acc-item:target .icon {
-  background-image: url(../cssBayan/memes/slide-up.png);
+:target ~ .item-checked .link .arrow .icon {
+  display: none;
+}
+
+
+#item-checked:hover .link .arrow .icon,
+.item-checked .link .arrow .icon,
+#mem1:target ~ .acc-item1 .link .arrow .icon,
+#mem2:target ~ .acc-item2 .link .arrow .icon,
+#mem3:target ~ .acc-item3 .link .arrow .icon,
+#mem4:target ~ .acc-item4 .link .arrow .icon,
+#mem5:target ~ .acc-item5 .link .arrow .icon {
+  background-image: url(../cssBayan/memes/1-rotate-multiply-30.png);
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  width: 38px;
+  height: 34px;
+  border: 0;
+  display: block;
+  background-color: transparent;
   transition: 0.8s;
 }
 
@@ -268,4 +288,10 @@ img {
   .text-container:hover {
     transform: translate3d(-56.6625px, -13.125px, 0px);
   }
+}
+
+.arrow {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
 }
