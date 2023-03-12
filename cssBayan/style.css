@@ -169,7 +169,22 @@ img {
   }
 }
 
-.item-checked .text-container {
+:target ~ .item-checked .text-container {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  max-height: 0;
+  overflow: hidden;
+  background: transparent;
+  transition: 0.8s;
+}
+
+.item-checked .text-container,
+#mem1:target ~ .acc-item1 .text-container,
+#mem2:target ~ .acc-item2 .text-container,
+#mem3:target ~ .acc-item3 .text-container,
+#mem4:target ~ .acc-item4 .text-container,
+#mem5:target ~ .acc-item5 .text-container {
   overflow: visible;
   max-height: 100rem;
 }
@@ -198,26 +213,26 @@ img {
 }
 
 @media (hover: hover) {
-.wrapper:hover .arrow {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 90%;
-  transition: 0.8s;
-}
+  .wrapper:hover .arrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    transition: 0.8s;
+  }
 }
 
 @media (hover: hover) {
-.wrapper:hover .icon {
-  background-image: url(../cssBayan/memes/slide-down.png);
-  background-repeat: no-repeat;
-  background-size: 50px 50px;
-  width: 50px;
-  height: 50px;
-  border: 0;
-  background-color: transparent;
-  transition: 0.8s;
-}
+  .wrapper:hover .icon {
+    background-image: url(../cssBayan/memes/slide-down.png);
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+    width: 50px;
+    height: 50px;
+    border: 0;
+    background-color: transparent;
+    transition: 0.8s;
+  }
 }
 
 .icon {
