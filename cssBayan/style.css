@@ -89,6 +89,7 @@ body {
   padding-left: 1rem;
   font-size: 2rem;
   color: rgb(4, 34, 80);
+  transition: 0.8s;
 }
 
 @media (min-width: 820px) {
@@ -187,6 +188,7 @@ img {
 #mem5:target ~ .acc-item5 .text-container {
   overflow: visible;
   max-height: 100rem;
+  transition: 0.8s;
 }
 
 .acc-item:target .text-container {
@@ -200,6 +202,19 @@ img {
   }
 }
 
+@media (hover: hover) {
+  .acc-item:active img{
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+      rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+      rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+      rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+      rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+      rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    transform: translateY(-10px);
+    
+  }
+}
+
 .acc-item:hover .text-container {
   max-height: 50rem;
   transition: 0.8s;
@@ -208,12 +223,11 @@ img {
 @media (min-width: 1080px) {
   .acc-item:hover .text-container {
     max-height: 100rem;
-    transition: 0.8s;
   }
 }
 
 @media (hover: hover) {
-  .wrapper:hover .arrow {
+  .container:hover .arrow {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -223,8 +237,8 @@ img {
 }
 
 @media (hover: hover) {
-  .wrapper:hover .icon,
-  .wrapper:hover .item-checked .link .arrow .icon1 {
+  .container:hover .icon,
+  .container:hover .item-checked .link .arrow .icon1 {
     background-image: url(../cssBayan/memes/2-multiply-30.png);
     background-repeat: no-repeat;
     background-size: 30px 30px;
@@ -242,7 +256,7 @@ img {
 }
 
 @media (hover: hover) {
-  .wrapper:hover .icon {
+  .container:hover .icon {
     display: block;
     transition: 0.8s;
   }
@@ -264,7 +278,6 @@ img {
 :target ~ .item-checked .link .arrow .icon {
   display: none;
 }
-
 
 #item-checked:hover .link .arrow .icon,
 .item-checked .link .arrow .icon,
@@ -294,4 +307,11 @@ img {
   display: flex;
   justify-content: space-between;
   width: 90%;
+}
+
+@media (hover: hover) {
+  .container:hover .h2 {
+    color: #e3d2c4;
+    transition: 1s;
+  }
 }
