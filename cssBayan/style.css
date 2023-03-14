@@ -5,16 +5,9 @@
 }
 
 html {
-  font-size: 10px;
+  font-size: 0.5em;
   overflow: scroll;
   overflow-x: hidden;
-}
-::-webkit-scrollbar {
-  width: 0;
-  background: transparent;
-}
-::-webkit-scrollbar-thumb {
-  background: #ff0000;
 }
 
 body {
@@ -223,11 +216,6 @@ img {
   }  
 }
 
-/* @media (min-width: 1080px) {
-  .acc-item:hover .text-container {
-    max-height: 100rem;
-  }
-} */
 
 @media (hover: hover) {
   .container:hover .arrow {
