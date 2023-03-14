@@ -1,0 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 0.5em;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+body {
+  overflow: hidden;
+  font-size: 1.6rem;
+  font-family: "Inter", sans-serif;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #242a2f;
+}
+
+.main {
+  padding: 3rem 0;
+}
+@media (min-width: 820px) {
+  .main {
+    padding: 7rem 7rem;
+  }
+}
+
+.wrapper {
+  max-width: 122.2rem;
+  margin: 0 auto;
+  padding: 0 3rem 0 3rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+@media (min-width: 1080px) {
+  .container {
+    width: 70%;
+    margin: auto;
+  }
+}
+
+.link {
+  font-size: 1.6rem;
+  background: linear-gradient(to bottom right, #5761b2, #1fc5a8);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+  text-decoration: none;
+  border: 0.1rem solid #f6dfe9;
+  border-radius: 0.5rem;
+  color: #c8d7e2;
+}
+
+.h1 {
+  padding-bottom: 2rem;
+  font-size: 3rem;
+  color: #f8f0ee;
+}
+
+@media (min-width: 820px) {
+  .h1 {
+    font-size: 5rem;
+  }
+}
+
+@media (min-width: 1080px) {
+  .h1 {
+    font-size: 7rem;
+  }
+}
+
+.h2 {
+  padding-left: 1rem;
+  font-size: 2rem;
+  color: rgb(4, 34, 80);
+  transition: 0.8s;
+}
+
+@media (min-width: 820px) {
+  .h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1080px) {
+  .h2 {
+    font-size: 4rem;
+  }
+}
+
+.h3 {
+  padding: 1rem 3rem;
+  font-size: 1.8rem;
+  color: #c8d7e2;
+}
+@media (min-width: 820px) {
+  .h3 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (min-width: 1080px) {
+  .h3 {
+    font-size: 3.8rem;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+@media (min-width: 398px) {
+  img {
+    width: 70%;
+  }
+}
+
+@media (min-width: 525px) {
+  img {
+    width: 50%;
+  }
+}
+@media (min-width: 694px) {
+  img {
+    width: 40%;
+  }
+}
+
+@media (min-width: 1080px) {
+  img {
+    width: 60%;
+  }
+}
+
+.text-container {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  max-height: 0;
+  overflow: hidden;
+  background: transparent;
+  transition: 0.8s;
+}
+
+@media (min-width: 398px) {
+  .text-container {
+    align-items: center;
+  }
+}
+
+@media (min-width: 525px) {
+  .text-container {
+    align-items: center;
+  }
+}
+
+:target ~ .item-checked .text-container {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  max-height: 0;
+  overflow: hidden;
+  background: transparent;
+  transition: 0.8s;
+}
+
+.item-checked .text-container,
+#mem1:target ~ .acc-item1 .text-container,
+#mem2:target ~ .acc-item2 .text-container,
+#mem3:target ~ .acc-item3 .text-container,
+#mem4:target ~ .acc-item4 .text-container,
+#mem5:target ~ .acc-item5 .text-container {
+  overflow: visible;
+  max-height: 100rem;
+  transition: 0.8s;
+}
+
+.acc-item:target .text-container {
+  max-height: 50rem;
+  transition: 0.8s;
+}
+
+@media (min-width: 694px) {
+  .acc-item:target .text-container {
+    max-height: 100rem;
+  }
+}
+
+@media (hover: hover) {
+  .acc-item:active img,
+  .acc-item:active .h2,
+  .acc-item:active .icon{
+    box-shadow: rgba(0, 0, 0, 0.17) 0 -2.3rem 2.5rem 0 inset,
+      rgba(0, 0, 0, 0.15) 0 -3.6rem 3rem 0rem inset,
+      rgba(0, 0, 0, 0.1) 0 -7.9rem 4rem 0 inset,
+      rgba(0, 0, 0, 0.06) 0 0.2rem 0.1rem, rgba(0, 0, 0, 0.09) 0 0.4rem 0.2rem,
+      rgba(0, 0, 0, 0.09) 0 0.8rem 0.4rem, rgba(0, 0, 0, 0.09) 0 1.6rem 0.8rem,
+      rgba(0, 0, 0, 0.09) 0 3.2rem 1.6rem;    
+  }
+}
+
+@media (hover: hover) {
+  .acc-item:hover .text-container {
+    /* max-height: 50rem; */
+    max-height: 100rem;
+    transition: 0.8s;
+  }  
+}
+
+
+@media (hover: hover) {
+  .container:hover .arrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    transition: 0.8s;
+  }
+}
+
+@media (hover: hover) {
+  .container:hover .icon,
+  .container:hover .item-checked .link .arrow .icon1 {
+    background-image: url(../cssBayan/memes/2-multiply-30.png);
+    background-repeat: no-repeat;
+    background-size: 3rem 3rem;
+    width: 3.8rem;
+    height: 3.4rem;
+    border: 0;
+    display: block;
+    background-color: transparent;
+    transition: 0.8s;
+  }
+}
+
+.icon {
+  display: none;
+  transition: 0.8s;
+}
+
+@media (hover: hover) {
+  .container:hover .icon {
+    display: block;
+    transition: 0.8s;
+  }
+}
+
+@media (hover: hover) {
+  .acc-item:hover .icon {
+    background-image: url(../cssBayan/memes/1-rotate-multiply-30.png);
+    background-repeat: no-repeat;
+    background-size: 3rem 3rem;
+    width: 3.8rem;
+    height: 3.4rem;
+    border: 0;
+    background-color: transparent;
+    /* transition: 0.8s; */
+  }
+}
+
+:target ~ .item-checked .link .arrow .icon {
+  display: none;
+}
+
+
+@media (hover: hover) {
+  #item-checked:hover .link .arrow .icon,
+  .item-checked .link .arrow .icon,
+  #mem1:target ~ .acc-item1 .link .arrow .icon,
+  #mem2:target ~ .acc-item2 .link .arrow .icon,
+  #mem3:target ~ .acc-item3 .link .arrow .icon,
+  #mem4:target ~ .acc-item4 .link .arrow .icon,
+  #mem5:target ~ .acc-item5 .link .arrow .icon {
+    background-image: url(../cssBayan/memes/1-rotate-multiply-30.png);
+    background-repeat: no-repeat;
+    background-size: 3rem 3rem;
+    width: 3.8rem;
+    height: 3.4rem;
+    border: 0;
+    display: block;
+    background-color: transparent;
+    transition: 0.8s;
+  }
+}
+
+@media (hover: hover) {
+  .text-container:hover {
+    transform: translate3d(-5.6rem, -1.3rem, 0);
+  }
+}
+
+.arrow {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+@media (hover: hover) {
+  .container:hover .h2 {
+    color: #e3d2c4;
+    transition: 1s;
+  }
+}
+
